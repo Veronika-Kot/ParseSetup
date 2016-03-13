@@ -1,12 +1,12 @@
 # Parse iOS app example setup
 
-**ParseSetup** is a example photo sharing app using Parse as its backend.
+**ParseSetup** is a example photo sharing app using Parse backend.
 
 ## Video Walkthrough 
 
 Here's a walkthrough of implemented features:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+![gif walkthrough](demo1.gif)
 
 ## Notes
 
