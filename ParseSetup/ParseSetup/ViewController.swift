@@ -28,7 +28,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("CustomCell", forIndexPath: indexPath) as! CustomCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("StreamCell", forIndexPath: indexPath) as! StreamCell
         
         if (streams != nil) {
             cell.stream = streams![indexPath.row]
@@ -40,12 +40,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     @IBAction func addNewStream(sender: AnyObject) {
-        print("Add button clicked")
-        let newStream = Stream(name: "New Stream! Yay!")
-        print("The new stream created is (name): \(newStream.name)")
+        print("New stream add button clicked")
+        let newStream = Stream(name: "San Francisco")
         streams?.append(newStream)
-        print(streams?.count)
-        print("New stream created and appened to the streams array")
         tableView.reloadData()
     }
     
