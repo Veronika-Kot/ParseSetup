@@ -5,5 +5,7 @@ use_frameworks!
 
 target 'ParseSetup' do
 
+pod 'Parse'
+
 end
 

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -20,7 +21,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableView.delegate = self
         tableView.dataSource = self
         
-        tableView.reloadData()
+        Stream.getStreams({ (streams, success, error) -> () in
+            if error == nil {
+                self.streams = streams
+                self.tableView.reloadData()
+            }
+        })
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

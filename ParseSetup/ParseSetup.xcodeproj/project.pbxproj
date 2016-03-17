@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7FF9AFF506847187F4BEFDFE /* Pods_ParseSetup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D20169B466C4FED196A77E6 /* Pods_ParseSetup.framework */; };
 		FAA178431C993D6B007DF276 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA178421C993D6B007DF276 /* PhotosViewController.swift */; };
 		FAA178451C993EF8007DF276 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA178441C993EF8007DF276 /* ImageCell.swift */; };
 		FAA178471C993FB3007DF276 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA178461C993FB3007DF276 /* Image.swift */; };
@@ -20,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D20169B466C4FED196A77E6 /* Pods_ParseSetup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParseSetup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D5C74FFCCEC2CBC7C03F000 /* Pods-ParseSetup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParseSetup.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParseSetup/Pods-ParseSetup.debug.xcconfig"; sourceTree = "<group>"; };
+		D3B44963CEF8BA18668303D3 /* Pods-ParseSetup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParseSetup.release.xcconfig"; path = "Pods/Target Support Files/Pods-ParseSetup/Pods-ParseSetup.release.xcconfig"; sourceTree = "<group>"; };
 		FAA178421C993D6B007DF276 /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		FAA178441C993EF8007DF276 /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		FAA178461C993FB3007DF276 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
@@ -39,17 +43,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FF9AFF506847187F4BEFDFE /* Pods_ParseSetup.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		31B889E68393C6418178FFA9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2D5C74FFCCEC2CBC7C03F000 /* Pods-ParseSetup.debug.xcconfig */,
+				D3B44963CEF8BA18668303D3 /* Pods-ParseSetup.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		50F2F97F73DDF9213DB1C050 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D20169B466C4FED196A77E6 /* Pods_ParseSetup.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FAE600421C94FDC100EB3713 = {
 			isa = PBXGroup;
 			children = (
 				FAE6004D1C94FDC200EB3713 /* ParseSetup */,
 				FAE6004C1C94FDC200EB3713 /* Products */,
+				31B889E68393C6418178FFA9 /* Pods */,
+				50F2F97F73DDF9213DB1C050 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAE6005D1C94FDC200EB3713 /* Build configuration list for PBXNativeTarget "ParseSetup" */;
 			buildPhases = (
+				EF49662E2C6984BD7E9E8909 /* Check Pods Manifest.lock */,
 				FAE600471C94FDC100EB3713 /* Sources */,
 				FAE600481C94FDC100EB3713 /* Frameworks */,
 				FAE600491C94FDC100EB3713 /* Resources */,
+				231CCE3F8FB216AB51AC3F2D /* Embed Pods Frameworks */,
+				D4E3BAC6139AC98B4143F9D8 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -144,6 +171,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		231CCE3F8FB216AB51AC3F2D /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ParseSetup/Pods-ParseSetup-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D4E3BAC6139AC98B4143F9D8 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ParseSetup/Pods-ParseSetup-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF49662E2C6984BD7E9E8909 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FAE600471C94FDC100EB3713 /* Sources */ = {
@@ -265,6 +340,7 @@
 		};
 		FAE6005E1C94FDC200EB3713 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D5C74FFCCEC2CBC7C03F000 /* Pods-ParseSetup.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ParseSetup/Info.plist;
@@ -276,6 +352,7 @@
 		};
 		FAE6005F1C94FDC200EB3713 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3B44963CEF8BA18668303D3 /* Pods-ParseSetup.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ParseSetup/Info.plist;
