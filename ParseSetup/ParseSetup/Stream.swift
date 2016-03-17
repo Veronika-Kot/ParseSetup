@@ -46,22 +46,21 @@ class Stream: NSObject {
     class func getStreams(completionHandler: (streams: [Stream]?, success: Bool?, error: NSError?)-> ()) {
         
         var streams: [Stream]? = []
-        var stream = Stream()
 
         //construct query
         let query = PFQuery(className: "Stream")
         query.findObjectsInBackgroundWithBlock { (objects: [PFObject]?, error: NSError?) -> Void in
             if error == nil {
                 for object in objects! {
+                    let stream = Stream()
                     stream.name = object["name"] as? String
                     stream.date = object["date"] as? String
-                    print("Stream info found: \(stream.name) & \(stream.date)")
-                    streams?.append(stream)
+                    streams?.insert(stream, atIndex: 0)
                 }
                 completionHandler(streams: streams, success: true, error: nil)
             } else  {
                 print("Unable to get streams from Parse")
-                completionHandler(streams: streams, success: false, error: error)
+                completionHandler(streams: nil, success: false, error: error)
             }
         }
     }

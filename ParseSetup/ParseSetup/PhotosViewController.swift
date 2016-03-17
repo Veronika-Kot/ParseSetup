@@ -23,7 +23,13 @@ class PhotosViewController: UIViewController, UICollectionViewDelegate, UICollec
         collectionView.delegate = self
         collectionView.dataSource = self
         
-        collectionView.reloadData()
+        Image.getImagesInStream { (images, success, error) -> () in
+            if error == nil {
+                self.images = images
+                self.collectionView.reloadData()
+                print("Images info found and loaded!")
+            }
+        }
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

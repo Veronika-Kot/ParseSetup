@@ -25,6 +25,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             if error == nil {
                 self.streams = streams
                 self.tableView.reloadData()
+                print("Stream info found and loaded!")
             }
         })
     }
